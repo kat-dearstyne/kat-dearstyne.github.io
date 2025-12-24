@@ -16,7 +16,7 @@
             line-height: 1.4;
             color: #333;
             background: #fff;
-            max-width: 850px;
+            max-width: 950px;
             margin: 0 auto;
             padding: 15px;
         }
@@ -24,20 +24,20 @@
         /* Header Section */
         header {
             text-align: center;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
             border-bottom: 3px solid #2c3e50;
-            padding-bottom: 18px;
+            padding-bottom: 15px;
             background: linear-gradient(to bottom, #fff 0%, #fafafa 100%);
-            padding: 20px 20px 18px 20px;
-            margin: -15px -15px 25px -15px;
+            padding: 18px 20px 15px 20px;
+            margin: -15px -15px 20px -15px;
         }
 
         h1 {
-            font-size: 2.3em;
+            font-size: 2.2em;
             color: #2c3e50;
             font-weight: 400;
             letter-spacing: 3px;
-            margin-bottom: 12px;
+            margin-bottom: 10px;
             text-shadow: 1px 1px 2px rgba(0,0,0,0.05);
         }
 
@@ -46,15 +46,15 @@
             justify-content: center;
             gap: 15px;
             flex-wrap: wrap;
-            font-size: 0.95em;
+            font-size: 0.9em;
             color: #555;
         }
-        
+
         .contact-info span {
             padding: 0 2px;
             position: relative;
         }
-        
+
         .contact-info span:not(:last-child)::after {
             content: '|';
             position: absolute;
@@ -71,43 +71,62 @@
             text-decoration: underline;
         }
 
+        /* Two Column Layout */
+        .content-wrapper {
+            display: flex;
+            gap: 25px;
+        }
+
+        .sidebar {
+            width: 32%;
+            flex-shrink: 0;
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 4px;
+        }
+
+        .main-content {
+            flex: 1;
+        }
+
         /* Section Headers */
         h2 {
             color: #2c3e50;
-            font-size: 1.3em;
+            font-size: 1.15em;
             font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 1.5px;
-            margin-top: 22px;
-            margin-bottom: 14px;
+            margin-top: 0;
+            margin-bottom: 12px;
             padding-bottom: 4px;
             border-bottom: 2px solid #2c3e50;
             position: relative;
         }
 
-        /* Education Section */
-        .education-item, .experience-item {
-            margin-bottom: 15px;
+        .main-content h2 {
+            font-size: 1.2em;
         }
-        
-        .publication-item {
-            margin-bottom: 25px;
+
+        section {
+            margin-bottom: 18px;
+        }
+
+        /* Education Section */
+        .education-item, .experience-item, .fellowship-item {
+            margin-bottom: 12px;
         }
 
         .item-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            margin-bottom: 5px;
+            margin-bottom: 3px;
         }
 
         .institution {
             font-weight: 600;
             color: #2c3e50;
-            font-size: 1.05em;
+            font-size: 0.95em;
             letter-spacing: 0.3px;
         }
-        
+
         .institution .location {
             font-weight: 400;
             color: #888;
@@ -118,18 +137,19 @@
 
         .degree {
             font-weight: 500;
+            font-size: 0.9em;
             margin-bottom: 2px;
         }
 
         .date {
             color: #666;
             font-style: italic;
-            font-size: 0.9em;
+            font-size: 0.85em;
         }
 
         .location {
             color: #888;
-            font-size: 0.9em;
+            font-size: 0.85em;
             font-style: italic;
         }
 
@@ -143,73 +163,87 @@
         .honors {
             font-style: italic;
             color: #555;
+            font-size: 0.92em;
+            margin-top: 2px;
+        }
+
+        /* Fellowship Section */
+        .fellowship-item .program-name {
+            font-weight: 600;
+            color: #2c3e50;
+            font-size: 0.95em;
+        }
+
+        .fellowship-item .role {
+            font-weight: 500;
+            font-size: 0.9em;
+            color: #555;
+        }
+
+        .fellowship-item .details {
             margin-top: 3px;
+            font-size: 0.9em;
         }
 
         /* Experience Section */
         .position {
             font-weight: 600;
             color: #2c3e50;
-            font-size: 1.05em;
+            font-size: 1em;
         }
 
         .company {
             font-weight: 500;
             color: #555;
             display: inline-block;
-            margin-right: 8px;
+            margin-right: 5px;
+            font-size: 0.95em;
         }
-        
+
         .company-location {
             display: flex;
             align-items: baseline;
-            margin-bottom: 5px;
+            margin-bottom: 3px;
+        }
+
+        .experience-item .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
         }
 
         ul {
-            margin-left: 20px;
-            margin-top: 5px;
+            margin-left: 18px;
+            margin-top: 4px;
         }
 
         li {
-            margin-bottom: 3px;
+            margin-bottom: 2px;
             color: #555;
             font-size: 0.92em;
-            line-height: 1.4;
-        }
-
-        .subsection {
-            margin-top: 10px;
-            margin-bottom: 5px;
-        }
-
-        .subsection-title {
-            font-weight: 600;
-            color: #444;
-            font-size: 0.98em;
-            margin-bottom: 5px;
+            line-height: 1.35;
         }
 
         /* Publications Section */
         .publication-item {
-            margin-bottom: 18px;
-            padding-left: 45px;
+            margin-bottom: 14px;
+            padding-left: 38px;
             position: relative;
         }
 
         .pub-number {
             position: absolute;
-            left: 10px;
+            left: 8px;
             top: 0;
-            width: 22px;
-            height: 22px;
+            width: 20px;
+            height: 20px;
             background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
             color: white;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 0.8em;
+            font-size: 0.75em;
             font-weight: 600;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
@@ -217,24 +251,25 @@
         .pub-title {
             font-weight: 600;
             color: #2c3e50;
-            margin-bottom: 3px;
+            font-size: 0.92em;
+            margin-bottom: 2px;
         }
 
         .pub-authors {
-            font-size: 0.9em;
+            font-size: 0.85em;
             color: #666;
-            margin-bottom: 2px;
+            margin-bottom: 1px;
         }
 
         .pub-venue {
             font-style: italic;
             color: #555;
-            font-size: 0.9em;
-            margin-bottom: 2px;
+            font-size: 0.85em;
+            margin-bottom: 1px;
         }
 
         .pub-link {
-            font-size: 0.85em;
+            font-size: 0.8em;
             color: #3498db;
             text-decoration: none;
             word-break: break-all;
@@ -249,35 +284,48 @@
             body {
                 padding: 0;
                 max-width: 100%;
-                font-size: 10pt;
+                font-size: 9.5pt;
+            }
+
+            header {
+                margin: 0 0 15px 0;
+                padding: 15px 15px 12px 15px;
             }
 
             h1 {
-                font-size: 20pt;
+                font-size: 18pt;
             }
 
             h2 {
-                font-size: 12pt;
+                font-size: 11pt;
                 page-break-after: avoid;
             }
-            
-            section:nth-of-type(3) {
-                page-break-before: always;
+
+            .content-wrapper {
+                gap: 20px;
             }
 
-            .education-item, .experience-item, .publication-item {
+            .sidebar {
+                background-color: #f8f9fa !important;
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+            }
+
+            .education-item, .experience-item, .publication-item, .fellowship-item {
                 page-break-inside: avoid;
             }
 
             a {
-                color: #000 !important;
+                color: #2c3e50 !important;
                 text-decoration: none !important;
             }
 
             .pub-link {
-                color: #333 !important;
+                color: #3498db !important;
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
             }
-            
+
             .pub-number {
                 background: #2c3e50 !important;
                 color: white !important;
@@ -288,7 +336,15 @@
         }
 
         /* Responsive Design */
-        @media screen and (max-width: 600px) {
+        @media screen and (max-width: 700px) {
+            .content-wrapper {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                width: 100%;
+            }
+
             body {
                 padding: 10px;
             }
@@ -302,215 +358,235 @@
                 gap: 5px;
             }
 
-            .item-header {
+            .experience-item .item-header {
                 flex-direction: column;
             }
 
             .date {
-                margin-top: 5px;
+                margin-top: 3px;
             }
         }
     </style>
 </head>
 <body>
-   <header>
+    <header>
         <h1>KATHERINE DEARSTYNE</h1>
         <div class="contact-info">
-            <span><img src="../icons/email.png" alt="Website" style="width: 13px; margin-right: 3px; height: 13px; vertical-align: middle;"><a href="mailto:kdearsty@nd.edu">kdearsty@nd.edu</a></span>
+            <span><img src="../icons/email.png" alt="Email" style="width: 13px; margin-right: 3px; height: 13px; vertical-align: middle;"><a href="mailto:kdearsty@nd.edu">kdearsty@nd.edu</a></span>
             <span><img src="../icons/website.png" alt="Website" style="width: 13px; height: 13px; vertical-align: middle;"> <a href="https://kat-dearstyne.github.io/">kat-dearstyne.github.io</a></span>
             <span><img src="../icons/linkedin.png" alt="LinkedIn" style="width: 13px; height: 13px; vertical-align: middle;"> <a href="https://linkedin.com/in/katherine-dearstyne">linkedin.com/in/katherine-dearstyne</a></span>
             <span><img src="../icons/github.png" alt="GitHub" style="width: 14px; height: 14px; vertical-align: middle;"> <a href="https://github.com/kat-dearstyne">github.com/kat-dearstyne</a></span>
         </div>
     </header>
 
-    <section>
-        <h2>Education</h2>
-        
-        <div class="education-item">
-            <div class="item-header">
-                <div>
-                    <div class="institution">UNIVERSITY OF NOTRE DAME <span class="location">· Notre Dame, IN</span></div>
+    <div class="content-wrapper">
+        <div class="sidebar">
+            <section>
+                <h2>Education</h2>
+
+                <div class="education-item">
+                    <div class="item-header">
+                        <div class="institution">UNIVERSITY OF NOTRE DAME</div>
+                        <div class="location">Notre Dame, IN</div>
+                    </div>
                     <div class="degree">Ph.D. in Computer Science</div>
+                    <div class="date">2021–Present</div>
                     <div class="honors">Arthur J. Schmitt Leadership Fellowship</div>
                 </div>
-                <div class="date">2021–<b>Present</b></div>
-            </div>
-        </div>
 
-        <div class="education-item">
-            <div class="item-header">
-                <div>
-                    <div class="institution">DREXEL UNIVERSITY <span class="location">· Philadelphia, PA</span></div>
+                <div class="education-item">
+                    <div class="item-header">
+                        <div class="institution">DREXEL UNIVERSITY</div>
+                        <div class="location">Philadelphia, PA</div>
+                    </div>
                     <div class="degree">B.S. in Computer Science</div>
                     <div class="details">Minors: Mathematics, Psychology</div>
+                    <div class="date">2017–2021</div>
                     <div class="honors">Magna Cum Laude</div>
                 </div>
-                <div class="date">2017–2021</div>
-            </div>
-        </div>
-    </section>
+            </section>
 
-     <section>
-        <h2>Work Experience</h2>
-        
-        <div class="experience-item">
-            <div class="item-header">
-                <div>
-                    <div class="position">Research Fellow</div>
-                    <div class="company-location">
-                        <div class="company">SPAR (Supervised Program for Alignment Research)</div>
-                        <div class="location">· Remote</div>
+            <section>
+                <h2>Programs & Fellowships</h2>
+
+                <div class="fellowship-item">
+                    <div class="program-name">SPAR</div>
+                    <div class="details">Supervised Program for Alignment Research</div>
+                    <div class="role">Research Fellow</div>
+                    <div class="date">Sep. 2025–Present</div>
+                    <div class="details">Selected as a SPAR Research Fellow to work under the supervision of Georg Lange, conducting research on mechanistic interpretability and the relationship between memorization and generalization in LLMs.</div>
+                </div>
+
+                <div class="fellowship-item">
+                    <div class="program-name">ARENA 7.0</div>
+                    <div class="details">Alignment Research Engineer Accelerator</div>
+                    <div class="role">Accepted Participant (upcoming)</div>
+                    <div class="date">Jan. 2026–Feb. 2026</div>
+                    <div class="details">Admitted to a selective alignment research training program with a focus on mechanistic interpretability and empirical safety research.</div>
+                </div>
+            </section>
+        </div>
+
+        <div class="main-content">
+            <section>
+                <h2>Work Experience</h2>
+
+                <div class="experience-item">
+                    <div class="item-header">
+                        <div>
+                            <div class="position">Research Assistant</div>
+                            <div class="company-location">
+                                <div class="company">University of Notre Dame</div>
+                                <div class="location">· Notre Dame, IN</div>
+                            </div>
+                        </div>
+                        <div class="date">Aug. 2021–Present</div>
+                    </div>
+                    <div class="details">
+                        <ul>
+                            <li>Advised by Dr. Jane Cleland Huang, conducting research to create safer software systems through improved software engineering practices.</li>
+                            <li>Applied NLP techniques to improve trace link prediction and support automated software documentation.</li>
+                            <li>Developed a framework for designing more trustworthy reinforcement learning systems and generating more robust system requirements.</li>
+                        </ul>
                     </div>
                 </div>
-                <div class="date">Sep. 2025–<b>Present</b></div>
-            </div>
-            <div class="details">
-                <ul>
-                    <li>Selected as a Fall 2025 SPAR Fellow under the mentorship of Georg Lange.</li>
-                    <li>Using mechanistic interpretability to investigate the relationship between memorization and generalization in large language models.</li>
-                    <li>Research goal is to advance LLM safety by improving understanding of how models learn, store, and utilize different types of information.</li>
-                </ul>
-            </div>
-        </div>
-        
-        <div class="experience-item">
-            <div class="item-header">
-                <div>
-                    <div class="position">Research Intern</div>
-                    <div class="company-location">
-                        <div class="company">Microsoft Research</div>
-                        <div class="location">· Redmond, WA</div>
+
+                <div class="experience-item">
+                    <div class="item-header">
+                        <div>
+                            <div class="position">Research Intern</div>
+                            <div class="company-location">
+                                <div class="company">Microsoft Research</div>
+                                <div class="location">· Redmond, WA</div>
+                            </div>
+                        </div>
+                        <div class="date">May 2025–Aug. 2025</div>
+                    </div>
+                    <div class="details">
+                        <ul>
+                            <li>Worked with the Software Analysis and Intelligence in Engineering Systems (SAINTES) group in MSR to automate differential testing for a product group.</li>
+                            <li>Developed an AI agent for differential testing with traceability to key project artifacts, enabling engineers to validate outputs and ensure trustworthy results.</li>
+                            <li>Ongoing research focuses on extending these methods beyond differential testing to broader software engineering tasks and product groups.</li>
+                        </ul>
                     </div>
                 </div>
-                <div class="date">May 2025–Aug. 2025</div>
-            </div>
-            <div class="details">
-                <ul>
-                    <li>Worked with the Software Analysis and Intelligence in Engineering Systems (SAINTES) group in MSR to automate differential testing for a product group.</li>
-                    <li>Developed an AI agent for differential testing with traceability to key project artifacts, enabling engineers to validate outputs and ensure trustworthy results.</li>
-                    <li>Ongoing research focuses on extending these methods beyond differential testing to broader software engineering tasks and product groups.</li>
-                </ul>
-            </div>
-        </div>
-        
-        <div class="experience-item">
-            <div class="item-header">
-                <div>
-                    <div class="position">Research Assistant</div>
-                    <div class="company-location">
-                        <div class="company">University of Notre Dame</div>
-                        <div class="location">· Notre Dame, IN</div>
+
+                <div class="experience-item">
+                    <div class="item-header">
+                        <div>
+                            <div class="position">Co-founder | Lead Researcher</div>
+                            <div class="company-location">
+                                <div class="company">SAFA.ai</div>
+                                <div class="location">· Notre Dame, IN</div>
+                            </div>
+                        </div>
+                        <div class="date">Apr. 2022–Sep. 2024</div>
+                    </div>
+                    <div class="details">
+                        <ul>
+                            <li>Co-founded SAFA.ai, a platform leveraging AI to improve traceability and requirements management in safety-critical systems.</li>
+                            <li>Secured an STTR Phase I grant with NASA and completed nine industry pilot projects.</li>
+                            <li>Accepted into the 2023 Techstars Los Angeles Accelerator.</li>
+                        </ul>
                     </div>
                 </div>
-                <div class="date">Aug. 2021–<b>Present</b></div>
-            </div>
-            <div class="details">
-                <ul>
-                    <li>Advised by Dr. Jane Cleland Huang, conducting research to create safer software systems through improved software engineering practices.</li>
-                    <li>Applied NLP techniques to improve trace link prediction and support automated software documentation.</li>
-                    <li>Developed a framework for designing more trustworthy reinforcement learning systems and generating more robust system requirements.</li>
-                </ul>
-            </div>
-        </div>
 
-        <div class="experience-item">
-            <div class="item-header">
-                <div>
-                    <div class="position">Co-founder | Lead Researcher</div>
-                    <div class="company-location">
-                        <div class="company">SAFA.ai</div>
-                        <div class="location">· Notre Dame, IN</div>
+                <div class="experience-item">
+                    <div class="item-header">
+                        <div>
+                            <div class="position">Software & Systems Engineer</div>
+                            <div class="company-location">
+                                <div class="company">Lockheed Martin</div>
+                                <div class="location">· Mount Laurel, NJ</div>
+                            </div>
+                        </div>
+                        <div class="date">Apr. 2019–Mar. 2021</div>
+                    </div>
+                    <div class="details">
+                        <ul>
+                            <li>Worked on the Aegis System at the Rotary and Mission Systems Branch.</li>
+                            <li>Contributed to the development of a Java-based backend controller that reported real-time status of ship elements to user-facing interfaces.</li>
+                            <li>Automated system-level tests with a Python framework and led refactoring to improve modularity and maintainability.</li>
+                        </ul>
                     </div>
                 </div>
-                <div class="date">Apr. 2022–Sep. 2024</div>
-            </div>
-            <div class="details">
-                <ul>
-                    <li>Co-founded SAFA.ai, a platform leveraging AI to improve traceability and requirements management in safety-critical systems.</li>
-                    <li>Secured an STTR Phase I grant with NASA and completed nine industry pilot projects.</li>
-                    <li>Accepted into the 2023 Techstars Los Angeles Accelerator.</li>
-                </ul>
-            </div>
-        </div>
+            </section>
 
-        <div class="experience-item">
-            <div class="item-header">
-                <div>
-                    <div class="position">Software & Systems Engineer</div>
-                    <div class="company-location">
-                        <div class="company">Lockheed Martin</div>
-                        <div class="location">· Mount Laurel, NJ</div>
-                    </div>
+            <section>
+                <h2>Publications</h2>
+
+                <div class="publication-item">
+                    <span class="pub-number">1</span>
+                    <div class="pub-title">Revealing the Dark Matter: Connecting Tacit and System Knowledge in Human-AI Collaborations</div>
+                    <div class="pub-authors"><strong>Katherine R. Dearstyne</strong>, Carmen Badea, Christian Bird, Robert DeLine</div>
+                    <div class="pub-venue">2026 ACM/IEEE International Conference on Software Engineering (ICSE), NIER Track, Rio de Janeiro, Brazil</div>
+                    <a href="https://cabird.com/pdfs/dearstyne2026revealing.pdf" class="pub-link">https://cabird.com/pdfs/dearstyne2026revealing.pdf</a>
                 </div>
-                <div class="date">Apr. 2019–Mar. 2021</div>
-            </div>
-            <div class="details">
-                <ul>
-                    <li>Worked on the Aegis System at the Rotary and Mission Systems Branch.</li>
-                    <li>Contributed to the development of a Java-based backend controller that reported real-time status of ship elements to user-facing interfaces.</li>
-                    <li>Automated system-level tests with a Python framework and led refactoring to improve modularity and maintainability.</li>
-                </ul>
-            </div>
+
+                <div class="publication-item">
+                    <span class="pub-number">2</span>
+                    <div class="pub-title">Real-World Traceability Patterns for Generative AI Systems: With Insights from the Safa Dataset</div>
+                    <div class="pub-authors"><strong>Katherine R. Dearstyne</strong>, Alberto D. Rodriguez, Jane Cleland-Huang</div>
+                    <div class="pub-venue">2026 RAISE Workshop on Requirements Engineering for AI-powered SoftwarE at ICSE, Rio de Janeiro, Brazil</div>
+                </div>
+
+                <div class="publication-item">
+                    <span class="pub-number">3</span>
+                    <div class="pub-title">QuestRL: A Q&A Framework for Designing Trustworthy Reinforcement Learning Systems</div>
+                    <div class="pub-authors"><strong>Katherine R. Dearstyne</strong>, Pedro T. Alarcon Granadeno, Tyler Chambers, Jane Cleland-Huang</div>
+                    <div class="pub-venue">2025 IEEE 33rd International Requirements Engineering Conference, Valencia, Spain</div>
+                    <a href="https://ieeexplore.ieee.org/abstract/document/11190358" class="pub-link">https://ieeexplore.ieee.org/abstract/document/11190358</a>
+                </div>
+
+                <div class="publication-item">
+                    <span class="pub-number">4</span>
+                    <div class="pub-title">Assessing Compliance of Software System Designs to Laws, Regulations, and their Underlying Values</div>
+                    <div class="pub-authors">Aleksandra Marczak-Czajka, <strong>Katherine R. Dearstyne</strong>, Jane Cleland-Huang</div>
+                    <div class="pub-venue">2025 IEEE/ACM International Workshop on Designing Software (Designing) at ICSE, Ottawa, ON, Canada</div>
+                    <a href="https://ieeexplore.ieee.org/document/11029552" class="pub-link">https://ieeexplore.ieee.org/document/11029552</a>
+                </div>
+
+                <div class="publication-item">
+                    <span class="pub-number">5</span>
+                    <div class="pub-title">Supporting Software Maintenance with Dynamically Generated Document Hierarchies</div>
+                    <div class="pub-authors"><strong>Katherine R. Dearstyne</strong>, Alberto D. Rodriguez, Jane Cleland-Huang</div>
+                    <div class="pub-venue">2024 IEEE International Conference on Software Maintenance and Evolution, Flagstaff, AZ</div>
+                    <a href="https://ieeexplore.ieee.org/abstract/document/10795041" class="pub-link">https://ieeexplore.ieee.org/abstract/document/10795041</a>
+                </div>
+
+                <div class="publication-item">
+                    <span class="pub-number">6</span>
+                    <div class="pub-title">ROOT: Requirements Organization and Optimization Tool</div>
+                    <div class="pub-authors"><strong>Katherine R. Dearstyne</strong>, Alberto D. Rodriguez, Jane Cleland-Huang</div>
+                    <div class="pub-venue">2024 IEEE International Conference on Software Maintenance and Evolution, Flagstaff, AZ</div>
+                    <a href="https://ieeexplore.ieee.org/abstract/document/10795032" class="pub-link">https://ieeexplore.ieee.org/abstract/document/10795032</a>
+                </div>
+
+                <div class="publication-item">
+                    <span class="pub-number">7</span>
+                    <div class="pub-title">Prompts Matter: Insights and Strategies for Prompt Engineering in Automated Software Traceability</div>
+                    <div class="pub-authors">Alberto D. Rodriguez, <strong>Katherine R. Dearstyne</strong>, Jane Cleland-Huang</div>
+                    <div class="pub-venue">2023 IEEE International Requirements Engineering Conference Workshops, Hanover, Germany</div>
+                    <a href="https://ieeexplore.ieee.org/abstract/document/10260721" class="pub-link">https://ieeexplore.ieee.org/abstract/document/10260721</a>
+                </div>
+
+                <div class="publication-item">
+                    <span class="pub-number">8</span>
+                    <div class="pub-title">SAFA: A Tool for Supporting Safety Analysis in Evolving Software Systems</div>
+                    <div class="pub-authors">Alberto D. Rodriguez, Timothy Newman, <strong>Katherine R. Dearstyne</strong>, Jane Cleland-Huang</div>
+                    <div class="pub-venue">2022 IEEE/ACM International Conference on Automated Software Engineering, Rochester, MI</div>
+                    <a href="https://dl.acm.org/doi/10.1145/3551349.3559535" class="pub-link">https://dl.acm.org/doi/10.1145/3551349.3559535</a>
+                </div>
+
+                <div class="publication-item">
+                    <span class="pub-number">9</span>
+                    <div class="pub-title">MEWS: Real-time Social Media Manipulation Detection and Analysis</div>
+                    <div class="pub-authors">Trenton W. Ford, Michael Yankoski, William Theisen, Tom Henry, Farah Khashman, <strong>Katherine R. Dearstyne</strong>, Tim Weninger, Pamela Bilo Thomas</div>
+                    <div class="pub-venue">2021 Conference on Neural Information Processing Systems (NeurIPS), Competition and Demonstration Track, Virtual</div>
+                    <a href="https://proceedings.mlr.press/v176/ford22a/ford22a.pdf" class="pub-link">https://proceedings.mlr.press/v176/ford22a/ford22a.pdf</a>
+                </div>
+            </section>
         </div>
-    </section>
-
-
-
-    <section>
-        <h2>Publications</h2>
-        
-        <div class="publication-item">
-            <span class="pub-number">1</span>
-            <div class="pub-title">QuestRL: A Q&A Framework for Designing Trustworthy Reinforcement Learning Systems</div>
-            <div class="pub-authors"><strong>Katherine R. Dearstyne</strong>, Pedro T. Alarcon Granadeno, Tyler Chambers, Jane Cleland-Huang</div>
-            <div class="pub-venue">2025 IEEE 33rd International Requirements Engineering Conference</div>
-            <div class="pub-venue">Valencia, Spain</div>
-        </div>
-
-        <div class="publication-item">
-            <span class="pub-number">2</span>
-            <div class="pub-title">Assessing Compliance of Software System Designs to Laws, Regulations, and their Underlying Values</div>
-            <div class="pub-authors">Aleksandra Marczak-Czajka, <strong>Katherine R. Dearstyne</strong>, Jane Cleland-Huang</div>
-            <div class="pub-venue">2025 IEEE/ACM International Workshop on Designing Software (Designing)</div>
-            <div class="pub-venue">Ottawa, ON, Canada</div>
-            <a href="https://ieeexplore.ieee.org/document/11029552" class="pub-link">https://ieeexplore.ieee.org/document/11029552</a>
-        </div>
-
-        <div class="publication-item">
-            <span class="pub-number">3</span>
-            <div class="pub-title">Supporting Software Maintenance with Dynamically Generated Document Hierarchies</div>
-            <div class="pub-authors"><strong>Katherine R. Dearstyne</strong>, Alberto D. Rodriguez, Jane Cleland-Huang</div>
-            <div class="pub-venue">2024 IEEE International Conference on Software Maintenance and Evolution</div>
-            <div class="pub-venue">Flagstaff, Arizona, USA</div>
-            <a href="https://ieeexplore.ieee.org/abstract/document/10795041" class="pub-link">https://ieeexplore.ieee.org/abstract/document/10795041</a>
-        </div>
-
-        <div class="publication-item">
-            <span class="pub-number">4</span>
-            <div class="pub-title">ROOT: Requirements Organization and Optimization Tool</div>
-            <div class="pub-authors"><strong>Katherine R. Dearstyne</strong>, Alberto D. Rodriguez, Jane Cleland-Huang</div>
-            <div class="pub-venue">2024 IEEE International Conference on Software Maintenance and Evolution</div>
-            <div class="pub-venue">Flagstaff, Arizona, USA</div>
-            <a href="https://ieeexplore.ieee.org/abstract/document/10795032" class="pub-link">https://ieeexplore.ieee.org/abstract/document/10795032</a>
-        </div>
-
-        <div class="publication-item">
-            <span class="pub-number">5</span>
-            <div class="pub-title">Prompts Matter: Insights and Strategies for Prompt Engineering in Automated Software Traceability</div>
-            <div class="pub-authors">Alberto D. Rodriguez, <strong>Katherine R. Dearstyne</strong>, Jane Cleland-Huang</div>
-            <div class="pub-venue">2023 IEEE International Requirements Engineering Conference Workshops</div>
-            <div class="pub-venue">Hanover, Germany</div>
-            <a href="https://ieeexplore.ieee.org/abstract/document/10260721" class="pub-link">https://ieeexplore.ieee.org/abstract/document/10260721</a>
-        </div>
-
-        <div class="publication-item">
-            <span class="pub-number">6</span>
-            <div class="pub-title">SAFA: A Tool for Supporting Safety Analysis in Evolving Software Systems</div>
-            <div class="pub-authors">Alberto D. Rodriguez, Timothy Newman, <strong>Katherine R. Dearstyne</strong>, Jane Cleland-Huang</div>
-            <div class="pub-venue">2022 IEEE/ACM International Conference on Automated Software Engineering</div>
-            <div class="pub-venue">Rochester, Michigan, USA</div>
-            <a href="https://dl.acm.org/doi/10.1145/3551349.3559535" class="pub-link">https://dl.acm.org/doi/10.1145/3551349.3559535</a>
-        </div>
-    </section>
+    </div>
 </body>
 </html>
