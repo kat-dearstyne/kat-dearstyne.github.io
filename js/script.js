@@ -17,6 +17,58 @@ if (hamburger && navMenu) {
     });
 }
 
+// Project Carousel
+const carouselTrack = document.querySelector('.carousel-track');
+const btnLeft = document.querySelector('.carousel-btn-left');
+const btnRight = document.querySelector('.carousel-btn-right');
+
+if (carouselTrack && btnLeft && btnRight) {
+    let currentIndex = 0;
+
+    function getVisibleCount() {
+        return window.innerWidth <= 768 ? 1 : 3;
+    }
+
+    function getTotalCards() {
+        return carouselTrack.children.length;
+    }
+
+    function updateCarousel() {
+        const visibleCount = getVisibleCount();
+        const totalCards = getTotalCards();
+        const maxIndex = totalCards - visibleCount;
+        if (currentIndex > maxIndex) currentIndex = maxIndex;
+        if (currentIndex < 0) currentIndex = 0;
+
+        const gap = 24; // 1.5rem
+        const viewportWidth = carouselTrack.parentElement.offsetWidth;
+        const cardWidth = (viewportWidth - gap * (visibleCount - 1)) / visibleCount;
+
+        Array.from(carouselTrack.children).forEach(card => {
+            card.style.width = cardWidth + 'px';
+        });
+
+        const offset = currentIndex * (cardWidth + gap);
+        carouselTrack.style.transform = `translateX(-${offset}px)`;
+
+        btnLeft.disabled = currentIndex === 0;
+        btnRight.disabled = currentIndex >= maxIndex;
+    }
+
+    btnLeft.addEventListener('click', () => {
+        currentIndex--;
+        updateCarousel();
+    });
+
+    btnRight.addEventListener('click', () => {
+        currentIndex++;
+        updateCarousel();
+    });
+
+    window.addEventListener('resize', updateCarousel);
+    updateCarousel();
+}
+
 // Smooth scrolling for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -65,7 +117,7 @@ const observer = new IntersectionObserver((entries) => {
 // Apply animation to elements
 document.addEventListener('DOMContentLoaded', () => {
     const animatedElements = document.querySelectorAll(
-        '.highlight-card, .publication-item, .experience-item, .area-card, .project-card, .award-item'
+        '.publication-item, .experience-item, .area-card, .project-card, .award-item'
     );
     
     animatedElements.forEach(el => {

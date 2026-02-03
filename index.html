@@ -62,30 +62,55 @@
         <section class="highlights">
             <div class="container">
                 <h3 class="section-title">Research Projects</h3>
-<div class="highlights-grid">
-    <div class="highlight-card">
-        <h4><br>&#8203;Memorization and Generalization in LLMs</h4>
-        <div class="project-status current">Current</div>
-        <p>Using mechanistic interpretability to investigate the relationship between memorization and generalization in large language models as part of the SPAR fellowship under Georg Lange.</p>
+<div class="carousel-wrapper">
+    <button class="carousel-btn carousel-btn-left" aria-label="Previous projects">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="15,18 9,12 15,6"></polyline>
+        </svg>
+    </button>
+    <div class="carousel-viewport">
+        <div class="carousel-track">
+            <div class="highlight-card">
+                <h4>Encoded Reasoning in Chain-of-Thought</h4>
+                <div class="project-status current">Current</div>
+                <p>Investigating how constraints on chain-of-thought affect LLM performance and incentivize encoded reasoning, with implications for the monitorability of reasoning in modern models.</p>
+            </div>
+            <div class="highlight-card">
+                <h4>Requirements Engineering for Code Generation</h4>
+                <div class="project-status current">Current</div>
+                <p>Empirically investigating the application of requirements engineering practices to code generation, examining how to increase maintainability of generated code and reduce common bug patterns.</p>
+            </div>
+            <div class="highlight-card">
+                <h4>Faithfulness of Cross-Layer Transcoders</h4>
+                <div class="project-status past">Past</div>
+                <p>Investigated memorization and generalization in LLMs using mechanistic interpretability as part of the SPAR fellowship under Georg Lange. Identified a limitation in Cross-Layer Transcoders, where they can be incentivized to learn unfaithful circuits.</p>
+                <a href="https://www.lesswrong.com/posts/6CS2NDmoLCFcEJMor/cross-layer-transcoders-are-incentivized-to-learn-unfaithful" target="_blank" class="project-link">View Post</a>
+            </div>
+            <div class="highlight-card">
+                <h4>More Traceable Software Agents for Human Oversight</h4>
+                <div class="project-status past">Past</div>
+                <p>Collaborated with Microsoft Research to enhance human oversight of AI agents in software engineering tasks by providing traceability to key project artifacts that informed decision-making.</p>
+                <a href="https://cabird.com/pdfs/dearstyne2026revealing.pdf" target="_blank" class="project-link">View Publication</a>
+            </div>
+            <div class="highlight-card">
+                <h4>Designing More Trustworthy RL Systems</h4>
+                <div class="project-status past">Past</div>
+                <p>Created a framework for designing more trustworthy reinforcement learning systems and stronger system requirements as part of NSF's Designing Accountable Software Systems (DASS) initiative.</p>
+                <a href="https://ieeexplore.ieee.org/abstract/document/11190358" target="_blank" class="project-link">View Publication</a>
+            </div>
+            <div class="highlight-card">
+                <h4>Automated Traceability & Requirements Analysis</h4>
+                <div class="project-status past">Past</div>
+                <p>Enhanced automation of requirements analysis, trace link discovery, and documentation generation. Contributed to building a visualization platform for commercialization through NASA STTR Phase I and the Techstars Accelerator Program.</p>
+                <a href="cv-research.html#publications" class="project-link">View Publications</a>
+            </div>
+        </div>
     </div>
-    <div class="highlight-card">
-        <h4><br>&#8203;More Traceable Software Agents for Human Oversight</h4>
-        <div class="project-status past">Past</div>
-        <p>Collaborated with Microsoft Research to enhance human oversight of AI agents in software engineering tasks by providing traceability to key project artifacts that informed decision-making.</p>
-
-    </div>
-    <div class="highlight-card">
-        <h4><br>&#8203;Designing More Trustworthy RL Systems</h4>
-        <div class="project-status past">Past</div>
-        <p>Created a framework for designing more trustworthy reinforcement learning systems and stronger system requirements as part of NSF’s Designing Accountable Software Systems (DASS) initiative.</p>
-
-    </div>
-    <div class="highlight-card">
-        <h4>Automated Traceability & Requirements Analysis</h4>
-        <div class="project-status past">Past</div>
-        <p>Enhanced automation of requirements analysis, trace link discovery, and documentation generation. Contributed to building a visualization platform for commercialization through NASA STTR Phase I and the Techstars Accelerator Program.</p>
-
-    </div>
+    <button class="carousel-btn carousel-btn-right" aria-label="Next projects">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="9,18 15,12 9,6"></polyline>
+        </svg>
+    </button>
 </div>
 
             </div>
@@ -93,8 +118,13 @@
 
         <section class="recent-publications">
             <div class="container">
-                <h3 class="section-title">Recent Publications</h3>
+                <h3 class="section-title">Recent Publications & Writing</h3>
                 <div class="publications-preview">
+                    <div class="publication-item">
+                        <span class="pub-year">2026</span>
+                        <h4>Cross-Layer Transcoders are Incentivized to Learn Unfaithful Circuits</h4>
+                        <p class="pub-venue">LessWrong</p>
+                    </div>
                     <div class="publication-item">
                         <span class="pub-year">2026</span>
                         <h4>Revealing the Dark Matter: Connecting Tacit and System Knowledge in Human-AI Collaborations</h4>

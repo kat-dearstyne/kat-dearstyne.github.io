@@ -1,0 +1,3 @@
+# Ignore everything in docs except cv.html (the only file linked on the website)
+docs/*
+!docs/cv.html

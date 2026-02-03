@@ -220,10 +220,52 @@ body {
     background: #f3f0ff;
 }
 
-.highlights-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+.carousel-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.carousel-viewport {
+    overflow: hidden;
+    flex: 1;
+}
+
+.carousel-track {
+    display: flex;
     gap: 1.5rem;
+    transition: transform 0.4s ease;
+}
+
+.carousel-track .highlight-card {
+    flex-shrink: 0;
+}
+
+.carousel-btn {
+    background: white;
+    border: 1px solid rgba(158, 158, 255, 0.3);
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #9E9EFF;
+    flex-shrink: 0;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.carousel-btn:hover {
+    background: #9E9EFF;
+    color: white;
+}
+
+.carousel-btn:disabled {
+    opacity: 0.3;
+    cursor: default;
+    background: white;
+    color: #9E9EFF;
 }
 
 .highlight-card {
@@ -270,6 +312,19 @@ body {
 .project-status.upcoming {
     background: #dbeafe;
     color: #1e40af;
+}
+
+.project-link {
+    margin-top: auto;
+    padding-top: 1rem;
+    color: #9E9EFF;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.project-link:hover {
+    text-decoration: underline;
 }
 
 .highlight-card:hover {
@@ -996,6 +1051,13 @@ body {
     font-weight: 500;
 }
 
+.subsection-title {
+    font-size: 1.25rem;
+    color: #64748b;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
 /* Publication Stats */
 .publication-stats {
     background: white;
@@ -1328,8 +1390,8 @@ body {
         flex: 1;
     }
 
-    .highlights-grid {
-        grid-template-columns: repeat(2, 1fr);
+    .carousel-track .highlight-card {
+        min-width: 100%;
     }
 
     .exp-date {
